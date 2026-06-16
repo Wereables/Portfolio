@@ -194,12 +194,28 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
         <div className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
           {caseStudy.id === "ibumdlali-app" ? (
             <Image
-              src="/assets/images/case-studies/ibumdlali.jpg"
+              src="/assets/images/case-studies/ibumdlali-full.png"
               alt={caseStudy.title}
               width={800}
               height={600}
               className="object-cover w-full h-full"
               priority
+            />
+          ) : caseStudy.id === "wesbank-systems" ? (
+            <Image
+              src="/assets/images/projects/wesbank.png"
+              alt={caseStudy.title}
+              width={800}
+              height={600}
+              className="object-contain w-full h-full p-8"
+            />
+          ) : caseStudy.id === "kepler-assessment" ? (
+            <Image
+              src="/assets/images/projects/kepler.png"
+              alt={caseStudy.title}
+              width={800}
+              height={600}
+              className="object-contain w-full h-full p-8"
             />
           ) : (
             <span className="text-gray-400">{caseStudy.title} Hero Image</span>

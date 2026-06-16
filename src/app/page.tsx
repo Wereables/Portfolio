@@ -47,15 +47,15 @@ export default function Home() {
             </Link>
           </div>
           
-          {/* Placeholder Image */}
+          {/* Profile Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-md aspect-square bg-gray-100 rounded-lg flex items-center justify-center shadow-lg">
+            <div className="w-full max-w-md aspect-square bg-gray-100 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
               <Image
-                src="/assets/images/case-studies/ibumdlali.jpg"
-                alt="Ib'umdlali Project - Award-winning gamified financial literacy app"
+                src="/assets/images/avatar.png"
+                alt="Martin Le Roux - Senior Product Designer"
                 width={400}
                 height={400}
-                className="object-cover rounded-lg"
+                className="object-cover w-full h-full"
                 priority
               />
             </div>

@@ -11,7 +11,7 @@ export default function CaseStudies() {
       description: "Complete redesign of the casino platform with focus on user experience and compliance.",
       tags: ["UX/UI", "Gambling", "Compliance", "Mobile-First"],
       year: "2024–Present",
-      image: "/assets/images/case-studies/grosvenor.jpg",
+      image: "/assets/images/projects/kepler.png",
     },
     {
       id: "kepler-assessment",
@@ -20,7 +20,7 @@ export default function CaseStudies() {
       description: "Developed UI/UX patterns for a robust design system serving global users.",
       tags: ["UX/UI", "Design System", "Data-Driven", "EdTech"],
       year: "2022–2024",
-      image: "/assets/images/case-studies/kepler.jpg",
+      image: "/assets/images/projects/kepler.png",
     },
     {
       id: "ibumdlali-app",
@@ -29,7 +29,7 @@ export default function CaseStudies() {
       description: "Gamified financial literacy app that won Gold for UX and Interface Design.",
       tags: ["UX/UI", "Gamification", "Mobile App", "Award-Winning"],
       year: "2017–2022",
-      image: "/assets/images/case-studies/ibumdlali.jpg",
+      image: "/assets/images/case-studies/ibumdlali-full.png",
     },
     {
       id: "wesbank-systems",
@@ -38,7 +38,7 @@ export default function CaseStudies() {
       description: "Complete UX/UI overhaul for marketing website and internal banking systems.",
       tags: ["UX/UI", "Fintech", "Internal Platforms", "Marketing"],
       year: "2017–2022",
-      image: "/assets/images/case-studies/wesbank.jpg",
+      image: "/assets/images/projects/wesbank.png",
     },
   ];
 
@@ -56,7 +56,7 @@ export default function CaseStudies() {
 
       {/* Case Studies Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {caseStudies.map((study) => (
+        {caseStudies.map((study, index) => (
           <article
             key={study.id}
             className="process-card group"
@@ -64,17 +64,29 @@ export default function CaseStudies() {
             <div className="process-card__image bg-gray-100 flex items-center justify-center aspect-video overflow-hidden">
               {study.id === "ibumdlali-app" ? (
                 <Image
-                  src="/assets/images/case-studies/ibumdlali.jpg"
+                  src={study.image}
                   alt={study.title}
                   width={400}
                   height={300}
                   className="object-cover w-full h-full"
                   priority={index === 2}
                 />
+              ) : study.id === "wesbank-systems" ? (
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  width={400}
+                  height={300}
+                  className="object-contain w-full h-full p-4"
+                />
               ) : (
-                <span className="text-gray-400 group-hover:text-gray-600 transition-colors">
-                  {study.title} Image
-                </span>
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  width={400}
+                  height={300}
+                  className="object-contain w-full h-full p-4"
+                />
               )}
             </div>
             <div className="process-card__content">
