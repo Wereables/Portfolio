@@ -61,10 +61,21 @@ export default function CaseStudies() {
             key={study.id}
             className="process-card group"
           >
-            <div className="process-card__image bg-gray-100 flex items-center justify-center aspect-video">
-              <span className="text-gray-400 group-hover:text-gray-600 transition-colors">
-                {study.title} Image
-              </span>
+            <div className="process-card__image bg-gray-100 flex items-center justify-center aspect-video overflow-hidden">
+              {study.id === "ibumdlali-app" ? (
+                <Image
+                  src="/assets/images/case-studies/ibumdlali.jpg"
+                  alt={study.title}
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-full"
+                  priority={index === 2}
+                />
+              ) : (
+                <span className="text-gray-400 group-hover:text-gray-600 transition-colors">
+                  {study.title} Image
+                </span>
+              )}
             </div>
             <div className="process-card__content">
               <div className="flex flex-wrap gap-2 mb-3">

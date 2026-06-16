@@ -189,10 +189,21 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
         </div>
       </section>
 
-      {/* Hero Image Placeholder */}
+      {/* Hero Image */}
       <section className="mb-12">
-        <div className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-          <span className="text-gray-400">{caseStudy.title} Hero Image</span>
+        <div className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          {caseStudy.id === "ibumdlali-app" ? (
+            <Image
+              src="/assets/images/case-studies/ibumdlali.jpg"
+              alt={caseStudy.title}
+              width={800}
+              height={600}
+              className="object-cover w-full h-full"
+              priority
+            />
+          ) : (
+            <span className="text-gray-400">{caseStudy.title} Hero Image</span>
+          )}
         </div>
       </section>
 

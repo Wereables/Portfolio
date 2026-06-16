@@ -1,14 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import AnimatedSection from "@/components/AnimatedSection";
 
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero / About Me Section */}
-      <section
-        id="about"
-        className="section-container mb-16 lg:mb-24"
-      >
+      <AnimatedSection className="section-container mb-16 lg:mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div>
@@ -16,7 +14,11 @@ export default function Home() {
               Hi there, I&apos;m Martin.
             </h1>
             <h2 className="text-xl sm:text-2xl text-gray-600 mb-6">
-              Senior Product Designer | UX/UI Specialist | AI Design Consultant
+              Senior Product Designer
+              <span className="text-blue-600 mx-2">|</span>
+              UX/UI Specialist
+              <span className="text-blue-600 mx-2">|</span>
+              AI Design Consultant
             </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
               I&apos;m a digital creative and product designer with a Bachelor in Visual Communication and over 10 years of experience crafting exceptional digital experiences. Throughout my career, I&apos;ve been part of award-winning projects and collaborated with cross-functional teams across B2B and B2C environments, delivering solutions for websites, mobile apps, internal digital platforms, and SAAS products.
@@ -26,32 +28,52 @@ export default function Home() {
             </p>
             <Link
               href="#skills"
-              className="btn btn--secondary"
+              className="btn btn--secondary inline-flex items-center gap-2"
             >
               View My Work
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
+              </svg>
             </Link>
           </div>
           
           {/* Placeholder Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-md aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-              <span className="text-gray-400">Hero Image Placeholder</span>
+            <div className="w-full max-w-md aspect-square bg-gray-100 rounded-lg flex items-center justify-center shadow-lg">
+              <Image
+                src="/assets/images/case-studies/ibumdlali.jpg"
+                alt="Ib'umdlali Project - Award-winning gamified financial literacy app"
+                width={400}
+                height={400}
+                className="object-cover rounded-lg"
+                priority
+              />
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Skills Section */}
-      <section
-        id="skills"
-        className="section-container mb-16 lg:mb-24"
-      >
+      <AnimatedSection delay={0.2} className="section-container mb-16 lg:mb-24">
         <h2 className="section-heading">What I Bring to the Table</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Core Skills */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Core Skills</h3>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">🎨</span>
+              Core Skills
+            </h3>
             <ul className="space-y-2">
               {[
                 "UX/UI",
@@ -72,8 +94,11 @@ export default function Home() {
           </div>
 
           {/* Specialization */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Specialization</h3>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">🤖</span>
+              Specialization
+            </h3>
             <ul className="space-y-2">
               {[
                 "AI UX",
@@ -90,8 +115,11 @@ export default function Home() {
           </div>
 
           {/* Tools & Soft Skills */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Tools</h3>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">🛠️</span>
+              Tools
+            </h3>
             <ul className="space-y-2 mb-6">
               {["Figma", "Miro", "HTML/CSS"].map((tool) => (
                 <li key={tool} className="skill-item">
@@ -101,7 +129,10 @@ export default function Home() {
               ))}
             </ul>
 
-            <h3 className="font-semibold text-gray-900 mb-4">Soft Skills</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">👥</span>
+              Soft Skills
+            </h3>
             <ul className="space-y-2 mb-6">
               {[
                 "Stakeholder Management",
@@ -115,7 +146,10 @@ export default function Home() {
               ))}
             </ul>
 
-            <h3 className="font-semibold text-gray-900 mb-4">Industries</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">🏢</span>
+              Industries
+            </h3>
             <ul className="space-y-2">
               {["Gambling", "Fintech", "SAAS", "EdTech", "Internal Digital Platforms"].map(
                 (industry) => (
@@ -128,20 +162,17 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Processes Section */}
-      <section
-        id="processes"
-        className="section-container mb-16 lg:mb-24"
-      >
-        <h2 className="section-heading mb-12">Processes</h2>
+      <AnimatedSection delay={0.4} className="section-container mb-16 lg:mb-24">
+        <h2 className="section-heading mb-12">My Design Process</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Process 01: Discover + Define */}
-          <article className="process-card">
-            <div className="process-card__image bg-gray-100 flex items-center justify-center">
-              <span className="text-gray-400">Process 01 Image</span>
+          <article className="process-card group">
+            <div className="process-card__image bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center aspect-video">
+              <span className="text-4xl text-blue-600">🔍</span>
             </div>
             <div className="process-card__content">
               <h3 className="process-card__heading">1. Discover + Define</h3>
@@ -162,9 +193,9 @@ export default function Home() {
           </article>
 
           {/* Process 02: Design + Deliver */}
-          <article className="process-card">
-            <div className="process-card__image bg-gray-100 flex items-center justify-center">
-              <span className="text-gray-400">Process 02 Image</span>
+          <article className="process-card group">
+            <div className="process-card__image bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center aspect-video">
+              <span className="text-4xl text-green-600">🎨</span>
             </div>
             <div className="process-card__content">
               <h3 className="process-card__heading">2. Design + Deliver</h3>
@@ -186,18 +217,15 @@ export default function Home() {
             </div>
           </article>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Career History Section */}
-      <section
-        id="career"
-        className="section-container mb-16 lg:mb-24"
-      >
+      <AnimatedSection delay={0.6} className="section-container mb-16 lg:mb-24">
         <h2 className="section-heading">My Journey</h2>
         
-        <div className="space-y-4">
+        <div className="space-y-6">
           {/* Current Role */}
-          <article className="career-item">
+          <article className="career-item bg-gray-50/50">
             <div className="career-item__header">
               <div>
                 <h3 className="career-item__title">
@@ -215,7 +243,7 @@ export default function Home() {
           </article>
 
           {/* Kepler + Co */}
-          <article className="career-item">
+          <article className="career-item bg-gray-50/50">
             <div className="career-item__header">
               <div>
                 <h3 className="career-item__title">Senior Product Designer at Kepler + Co</h3>
@@ -231,7 +259,7 @@ export default function Home() {
           </article>
 
           {/* One Point Four Consulting */}
-          <article className="career-item">
+          <article className="career-item bg-gray-50/50">
             <div className="career-item__header">
               <div>
                 <h3 className="career-item__title">Product Designer at One Point Four Consulting</h3>
@@ -245,22 +273,35 @@ export default function Home() {
               During my tenure at One Point Four Consulting, I worked on diverse projects including Ib&apos;umdlali (a gamified financial literacy app), WesBank (marketing website and internal banking systems), and BankservAfrica (brand identity, marketing site, and internal platforms). My responsibilities included cross-functional collaboration, conducting user testing sessions, creating animations and illustrations, and delivering award-winning design solutions.
             </p>
             <p className="career-item__description">
-              <strong>Awards & Recognition:</strong> Ib&apos;umdlali - Gold Award for UX, Interface & Navigation; Bronze Award for Apps & Innovative Solutions; Finalist for MTN App of the Year.
+              <strong className="text-green-600">Awards & Recognition:</strong> Ib&apos;umdlali - Gold Award for UX, Interface & Navigation; Bronze Award for Apps & Innovative Solutions; Finalist for MTN App of the Year.
             </p>
           </article>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Case Studies CTA */}
-      <section className="section-container mb-16 lg:mb-24">
+      <AnimatedSection delay={0.8} className="section-container mb-16 lg:mb-24">
         <h2 className="section-heading mb-6">Case Studies</h2>
         <p className="text-gray-600 mb-8">
           Explore detailed case studies of my work and design process.
         </p>
-        <Link href="/case-studies" className="btn btn--primary">
+        <Link href="/case-studies" className="btn btn--primary inline-flex items-center gap-2">
           View Case Studies
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
         </Link>
-      </section>
+      </AnimatedSection>
     </div>
   );
 }
