@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Martin Le Roux | Senior Product Designer",
-  description: "Portfolio of Martin Le Roux, Senior Product Designer specializing in UX/UI and AI heuristics.",
+  description: "Portfolio of Martin Le Roux, Senior Product Designer specializing in UX/UI, AI heuristics, and product design.",
   keywords: ["UX Design", "UI Design", "Product Design", "AI UX", "Design Portfolio", "Martin Le Roux"],
   authors: [{ name: "Martin Le Roux" }],
   openGraph: {
@@ -39,10 +39,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
