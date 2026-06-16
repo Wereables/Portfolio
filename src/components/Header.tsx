@@ -32,7 +32,14 @@ export default function Header() {
         >
           Get in Touch
         </Link>
-        <button className="btn btn--secondary text-sm">Share</button>
+        <Link
+          href="https://www.linkedin.com/in/martin-le-roux/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn--secondary text-sm"
+        >
+          LinkedIn
+        </Link>
       </div>
     </header>
   );

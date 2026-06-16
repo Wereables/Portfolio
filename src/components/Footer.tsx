@@ -43,7 +43,14 @@ export default function Footer() {
         <Link href="/contact" className="btn btn--secondary text-sm">
           Get in Touch
         </Link>
-        <button className="btn btn--secondary text-sm">Share</button>
+        <Link
+          href="https://www.linkedin.com/in/martin-le-roux/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn--secondary text-sm"
+        >
+          LinkedIn
+        </Link>
       </div>
     </footer>
   );

@@ -97,6 +97,7 @@ export default function Contact() {
                     hello@martinleroux.design
                   </a>
                 </p>
+                <p className="text-sm text-gray-500 mt-1">Connect with me directly</p>
               </div>
             </div>
 
@@ -150,7 +151,7 @@ export default function Contact() {
                 <h3 className="font-semibold text-gray-900 mb-1">Social</h3>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="https://linkedin.com/in/martinleroux"
+                    href="https://www.linkedin.com/in/martin-le-roux/"
                     target="_blank"
                     className="text-blue-600 hover:text-blue-700"
                   >

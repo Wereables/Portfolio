@@ -18,12 +18,27 @@ export const metadata: Metadata = {
     url: "https://portfolio-ucmm.vercel.app",
     siteName: "Martin Le Roux Portfolio",
     title: "Martin Le Roux | Senior Product Designer",
-    description: "Portfolio of Martin Le Roux, Senior Product Designer specializing in UX/UI and AI heuristics.",
+    description: "Portfolio of Martin Le Roux, Senior Product Designer specializing in UX/UI, AI heuristics, and product design.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Martin Le Roux | Senior Product Designer",
-    description: "Portfolio of Martin Le Roux, Senior Product Designer specializing in UX/UI and AI heuristics.",
+    description: "Portfolio of Martin Le Roux, Senior Product Designer specializing in UX/UI, AI heuristics, and product design.",
+    creator: "@martinleroux",
+  },
+  alternates: {
+    canonical: "https://portfolio-ucmm.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   robots: {
     index: true,

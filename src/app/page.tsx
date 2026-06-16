@@ -16,10 +16,13 @@ export default function Home() {
               Hi there, I&apos;m Martin.
             </h1>
             <h2 className="text-xl sm:text-2xl text-gray-600 mb-6">
-              UX, UI, Product Design, Consultant
+              Senior Product Designer | UX/UI Specialist | AI Design Consultant
             </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
-              I&apos;m a digital creative and product designer with a Bachelor in Visual Communication and 10 years of experience creating digital experiences. I&apos;ve been part of award-winning projects and worked with cross-functional teams in B2B and B2C environments for Websites, Apps, Internal Digital Platforms, and SAAS products. My design philosophy: Blend informed choices and smart design, bringing together business needs and user joy, while hitting those bottom-line goals.
+              I&apos;m a digital creative and product designer with a Bachelor in Visual Communication and over 10 years of experience crafting exceptional digital experiences. Throughout my career, I&apos;ve been part of award-winning projects and collaborated with cross-functional teams across B2B and B2C environments, delivering solutions for websites, mobile apps, internal digital platforms, and SAAS products.
+            </p>
+            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
+              My design philosophy centers on blending informed choices with smart, user-centric design. I bring together business objectives and user needs to create solutions that not only look great but also drive measurable results. With specialized expertise in AI UX, agentic design patterns, and gambling industry compliance (UKGC), I help organizations navigate complex design challenges.
             </p>
             <Link
               href="#skills"
@@ -201,13 +204,13 @@ export default function Home() {
                   Senior Product Designer at Rank Interactive (Grosvenor Casino)
                 </h3>
                 <p className="career-item__role">
-                  UX/UI, Prototyping, Research, User Testing, Documentation
+                  UX/UI Design | Prototyping | User Research | Usability Testing | Documentation
                 </p>
               </div>
               <span className="career-item__year">Dec 2024–Present</span>
             </div>
             <p className="career-item__description">
-              Championed user-centric design, aligned strategic goals with customer satisfaction, led workshops, streamlined development.
+              As Senior Product Designer at Rank Interactive, I lead the UX/UI design for Grosvenor Casino, focusing on creating compliant, user-centric gaming experiences. I champion user-centric design principles, align strategic business goals with customer satisfaction metrics, facilitate cross-functional workshops, and streamline development processes to deliver high-quality digital products.
             </p>
           </article>
 
@@ -215,15 +218,15 @@ export default function Home() {
           <article className="career-item">
             <div className="career-item__header">
               <div>
-                <h3 className="career-item__title">Kepler + Co</h3>
+                <h3 className="career-item__title">Senior Product Designer at Kepler + Co</h3>
                 <p className="career-item__role">
-                  UX/UI for a global skills assessment and learning platform
+                  UX/UI Design for Global Skills Assessment & Learning Platform
                 </p>
               </div>
               <span className="career-item__year">Feb 2022–July 2024</span>
             </div>
             <p className="career-item__description">
-              Developed UI/UX patterns for a robust design system, made data-driven decisions, and maintained documentation for user testing and research.
+              At Kepler + Co, I developed comprehensive UI/UX patterns for a robust, scalable design system serving a global user base. My work involved making data-driven design decisions, conducting user research, and maintaining extensive documentation to support user testing and continuous improvement of the learning platform.
             </p>
           </article>
 
@@ -231,16 +234,18 @@ export default function Home() {
           <article className="career-item">
             <div className="career-item__header">
               <div>
-                <h3 className="career-item__title">One Point Four Consulting</h3>
+                <h3 className="career-item__title">Product Designer at One Point Four Consulting</h3>
                 <p className="career-item__role">
-                  UX/UI for Ib&apos;umdlali, WesBank, BankservAfrica
+                  UX/UI Design for Multiple Clients & Projects
                 </p>
               </div>
               <span className="career-item__year">March 2017–March 2022</span>
             </div>
             <p className="career-item__description">
-              Cross-functional collaboration, user testing, animation, illustration. 
-              <strong>Awards:</strong> Ib&apos;umdlali - Gold: UX, Interface & Navigation; Bronze: Apps & Innovative Solutions; Finalist: MTN App of the Year.
+              During my tenure at One Point Four Consulting, I worked on diverse projects including Ib&apos;umdlali (a gamified financial literacy app), WesBank (marketing website and internal banking systems), and BankservAfrica (brand identity, marketing site, and internal platforms). My responsibilities included cross-functional collaboration, conducting user testing sessions, creating animations and illustrations, and delivering award-winning design solutions.
+            </p>
+            <p className="career-item__description">
+              <strong>Awards & Recognition:</strong> Ib&apos;umdlali - Gold Award for UX, Interface & Navigation; Bronze Award for Apps & Innovative Solutions; Finalist for MTN App of the Year.
             </p>
           </article>
         </div>
