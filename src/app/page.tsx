@@ -1,181 +1,261 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getProjects } from "@/lib/projects";
 
 export default function Home() {
-  const projects = getProjects();
-  const featuredProjects = projects.slice(0, 3);
-
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Hi, I'm <span className="text-primary-600">[Your Name]</span>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Hero / About Me Section */}
+      <section
+        id="about"
+        className="section-container mb-16 lg:mb-24"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+              Hi there, I&apos;m Martin.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              I build digital experiences that solve problems and create value. 
-              Welcome to my portfolio.
+            <h2 className="text-xl sm:text-2xl text-gray-600 mb-6">
+              UX, UI, Product Design, Consultant
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
+              I&apos;m a digital creative and product designer with a Bachelor in Visual Communication and 10 years of experience creating digital experiences. I&apos;ve been part of award-winning projects and worked with cross-functional teams in B2B and B2C environments for Websites, Apps, Internal Digital Platforms, and SAAS products. My design philosophy: Blend informed choices and smart design, bringing together business needs and user joy, while hitting those bottom-line goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors"
-              >
-                About Me
-              </Link>
-              <Link
-                href="/projects"
-                className="inline-flex items-center justify-center px-8 py-3 border border-primary-600 text-base font-medium rounded-md text-primary-600 bg-white hover:bg-primary-50 transition-colors"
-              >
-                View Projects
-              </Link>
+            <Link
+              href="#skills"
+              className="btn btn--secondary"
+            >
+              View My Work
+            </Link>
+          </div>
+          
+          {/* Placeholder Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-md aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
+              <span className="text-gray-400">Hero Image Placeholder</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              My Skills
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Technologies and tools I use to bring ideas to life
-            </p>
+      <section
+        id="skills"
+        className="section-container mb-16 lg:mb-24"
+      >
+        <h2 className="section-heading">What I Bring to the Table</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Core Skills */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Core Skills</h3>
+            <ul className="space-y-2">
+              {[
+                "UX/UI",
+                "IA",
+                "Wireframing",
+                "Prototyping",
+                "Mobile-First Design",
+                "User Testing",
+                "Research",
+                "Documentation",
+              ].map((skill) => (
+                <li key={skill} className="skill-item">
+                  <span className="skill-item__icon">✓</span>
+                  <span className="skill-item__label">{skill}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {[
-              { name: "JavaScript", icon: "🟨" },
-              { name: "TypeScript", icon: "🟦" },
-              { name: "React", icon: "⚛️" },
-              { name: "Next.js", icon: "⬜" },
-              { name: "Node.js", icon: "🟩" },
-              { name: "HTML5", icon: "🟥" },
-              { name: "CSS3", icon: "🟦" },
-              { name: "Tailwind", icon: "🌪️" },
-              { name: "Git", icon: "🟠" },
-              { name: "GitHub", icon: "⚫" },
-              { name: "Figma", icon: "🟣" },
-              { name: "VS Code", icon: "🟦" },
-            ].map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow"
-              >
-                <span className="text-3xl mb-2">{skill.icon}</span>
-                <span className="text-sm font-medium text-gray-700">
-                  {skill.name}
-                </span>
+          {/* Specialization */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Specialization</h3>
+            <ul className="space-y-2">
+              {[
+                "AI UX",
+                "Agentic Prompts",
+                "Heuristics",
+                "Gambling Industry Compliance (UKGC)",
+              ].map((skill) => (
+                <li key={skill} className="skill-item">
+                  <span className="skill-item__icon">✓</span>
+                  <span className="skill-item__label">{skill}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Tools & Soft Skills */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Tools</h3>
+            <ul className="space-y-2 mb-6">
+              {["Figma", "Miro", "HTML/CSS"].map((tool) => (
+                <li key={tool} className="skill-item">
+                  <span className="skill-item__icon">✓</span>
+                  <span className="skill-item__label">{tool}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="font-semibold text-gray-900 mb-4">Soft Skills</h3>
+            <ul className="space-y-2 mb-6">
+              {[
+                "Stakeholder Management",
+                "Cross-Functional Collaboration",
+                "Workshop Facilitation",
+              ].map((skill) => (
+                <li key={skill} className="skill-item">
+                  <span className="skill-item__icon">✓</span>
+                  <span className="skill-item__label">{skill}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="font-semibold text-gray-900 mb-4">Industries</h3>
+            <ul className="space-y-2">
+              {["Gambling", "Fintech", "SAAS", "EdTech", "Internal Digital Platforms"].map(
+                (industry) => (
+                  <li key={industry} className="skill-item">
+                    <span className="skill-item__icon">✓</span>
+                    <span className="skill-item__label">{industry}</span>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Processes Section */}
+      <section
+        id="processes"
+        className="section-container mb-16 lg:mb-24"
+      >
+        <h2 className="section-heading mb-12">Processes</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Process 01: Discover + Define */}
+          <article className="process-card">
+            <div className="process-card__image bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-400">Process 01 Image</span>
+            </div>
+            <div className="process-card__content">
+              <h3 className="process-card__heading">1. Discover + Define</h3>
+              <h4 className="process-card__subheading">
+                Uncovering User Needs and Business Goals, Translating Insights into Actionable Strategies
+              </h4>
+              <ul className="process-card__description list-disc list-inside space-y-1 text-sm">
+                <li>Stakeholder Interviews</li>
+                <li>User Research</li>
+                <li>Competitor Analysis</li>
+                <li>Data-Driven Insights</li>
+                <li>Persona Creation</li>
+                <li>User Journeys</li>
+                <li>Problem Definition</li>
+                <li>Strategic Decision-Making</li>
+              </ul>
+            </div>
+          </article>
+
+          {/* Process 02: Design + Deliver */}
+          <article className="process-card">
+            <div className="process-card__image bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-400">Process 02 Image</span>
+            </div>
+            <div className="process-card__content">
+              <h3 className="process-card__heading">2. Design + Deliver</h3>
+              <h4 className="process-card__subheading">
+                Crafting Intuitive, Compliant Solutions, Ensuring Seamless Handover and Implementation
+              </h4>
+              <ul className="process-card__description list-disc list-inside space-y-1 text-sm">
+                <li>Lo-Fi Wireframing</li>
+                <li>Prototyping</li>
+                <li>Usability Testing</li>
+                <li>Rapid Iteration</li>
+                <li>Gamified UX</li>
+                <li>Developer Collaboration</li>
+                <li>Design System Alignment</li>
+                <li>QA</li>
+                <li>User Testing</li>
+                <li>Documentation</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* Career History Section */}
+      <section
+        id="career"
+        className="section-container mb-16 lg:mb-24"
+      >
+        <h2 className="section-heading">My Journey</h2>
+        
+        <div className="space-y-4">
+          {/* Current Role */}
+          <article className="career-item">
+            <div className="career-item__header">
+              <div>
+                <h3 className="career-item__title">
+                  Senior Product Designer at Rank Interactive (Grosvenor Casino)
+                </h3>
+                <p className="career-item__role">
+                  UX/UI, Prototyping, Research, User Testing, Documentation
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Projects
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A selection of my recent work and case studies
+              <span className="career-item__year">Dec 2024–Present</span>
+            </div>
+            <p className="career-item__description">
+              Championed user-centric design, aligned strategic goals with customer satisfaction, led workshops, streamlined development.
             </p>
-          </div>
+          </article>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProjects.map((project) => (
-              <article
-                key={project.slug}
-                className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
-              >
-                <div className="aspect-video bg-gray-200 relative">
-                  {project.image && (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                      priority={false}
-                    />
-                  )}
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700"
-                  >
-                    Read Case Study
-                    <svg
-                      className="ml-1 w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          {/* Kepler + Co */}
+          <article className="career-item">
+            <div className="career-item__header">
+              <div>
+                <h3 className="career-item__title">Kepler + Co</h3>
+                <p className="career-item__role">
+                  UX/UI for a global skills assessment and learning platform
+                </p>
+              </div>
+              <span className="career-item__year">Feb 2022–July 2024</span>
+            </div>
+            <p className="career-item__description">
+              Developed UI/UX patterns for a robust design system, made data-driven decisions, and maintained documentation for user testing and research.
+            </p>
+          </article>
 
-          <div className="text-center mt-12">
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center px-6 py-3 border border-primary-600 text-base font-medium rounded-md text-primary-600 bg-white hover:bg-primary-50 transition-colors"
-            >
-              View All Projects
-            </Link>
-          </div>
+          {/* One Point Four Consulting */}
+          <article className="career-item">
+            <div className="career-item__header">
+              <div>
+                <h3 className="career-item__title">One Point Four Consulting</h3>
+                <p className="career-item__role">
+                  UX/UI for Ib&apos;umdlali, WesBank, BankservAfrica
+                </p>
+              </div>
+              <span className="career-item__year">March 2017–March 2022</span>
+            </div>
+            <p className="career-item__description">
+              Cross-functional collaboration, user testing, animation, illustration. 
+              <strong>Awards:</strong> Ib&apos;umdlali - Gold: UX, Interface & Navigation; Bronze: Apps & Innovative Solutions; Finalist: MTN App of the Year.
+            </p>
+          </article>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-800">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Let's Build Something Great Together
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-primary-50 transition-colors"
-          >
-            Get In Touch
-          </Link>
-        </div>
+      {/* Case Studies CTA */}
+      <section className="section-container mb-16 lg:mb-24">
+        <h2 className="section-heading mb-6">Case Studies</h2>
+        <p className="text-gray-600 mb-8">
+          Explore detailed case studies of my work and design process.
+        </p>
+        <Link href="/case-studies" className="btn btn--primary">
+          View Case Studies
+        </Link>
       </section>
-    </main>
+    </div>
   );
 }
